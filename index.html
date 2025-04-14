@@ -1,11 +1,326 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>apms</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asian Pest Management Services</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Raleway:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: white !important;
+    }
+
+    .navbar .nav-link,
+    .navbar .navbar-brand {
+      color: #b30000 !important;
+      font-weight: bold;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    .hero {
+      background-color: #fff0f0;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #b30000;
+    }
+
+    h2, h3, p, li {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .section {
+      padding: 2rem;
+      background-color: white;
+    }
+
+    .section:nth-child(even) {
+      background-color: #fef2f2;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service {
+      border: 2px solid #b30000;
+      padding: 1rem;
+      border-radius: 8px;
+      background-color: white;
+    }
+
+    footer {
+      background-color: #b30000;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      color: #b30000;
+    }
+
+    .navbar-brand img {
+      height: 70px;
+    }
+
+    .dropdown-menu a {
+      color: #000 !important;
+    }
+
+    .clients-list {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      gap: 2rem;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .clients-list li::before {
+      content: "• ";
+      color: #b30000;
+      font-weight: bold;
+    }
+
+    .service img {
+     max-height: 180px;
+     object-fit: cover;
+     border: 2px solid #b30000;
+    }
+
+    .hero {
+  background-image: url('webimg/home-bg.jpg');
+  background-size: contain; /* ensures whole image is visible */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffffff; /* ✅ set background to white */
+  text-align: center;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  position: relative;
+  color: white;
+}
+
+.hero .overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* dark overlay for text contrast */
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 90%;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+    background-size: contain;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero h3 {
+    font-size: 1rem;
+  }
+}
+  </style>
 </head>
 <body>
-  <h1>Asian Pest Management Service</h1>
-  <p>Website build is in progress</p>
-  <img src="images/hometest.jpg">
+
+  <!-- Bootstrap Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="webimg/icon.jpg" alt="APMS Logo" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#services" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Services</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#services">All Services</a></li>
+              <li><a class="dropdown-item" href="#services">Cockroach Eliminator</a></li>
+              <li><a class="dropdown-item" href="#services">Rodent Eliminator</a></li>
+              <li><a class="dropdown-item" href="#services">Termites Eliminator</a></li>
+              <li><a class="dropdown-item" href="#services">Bedbugs Eliminator</a></li>
+              <li><a class="dropdown-item" href="#services">Mosquitos Eliminator</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#expertise">Expertise</a></li>
+          <li class="nav-item"><a class="nav-link" href="#action">Action</a></li>
+          <li class="nav-item"><a class="nav-link" href="#clients">Clients</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+
+  </section>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>APMS is one of the leading company & professionally managed organisation, since 2005. We have successfully served by providing services such as cockroaches, bedbugs, rodents, termites, mosquitos, woodborer, bird net protection, etc.
+    </p><p>We take pride in the fact that no one knows pests the way we do. </p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service">
+        <h3>🪳 Cockroach Eliminator</h3>
+        <p>Cockroaches enter your premises through cracks and drain pipes. Many diseases including allergies and asthma are caused through them. They remain active and keep multiplying all over the year. They are known for flying berserk everywhere, emitting unpleasant odors and making chirping noise, which can easily create havoc at your premises.</p>
+      <b>Treatment:</b><p>APMS’s service comprises of odourless chemical spray & gel treatment</p>
+      </div>
+      <div class="service">
+        <h3>🐭 Rodent Eliminator</h3>
+        <p>Rodents have been known to damage buildings, contaminate food and also a major reason to cause fire by gnawing the cables of electrical wiring. They’re diverse; the rodent family includes rats, mice, bandicoot, gophers, and more. They’re also adaptable, extremely fertile (A pair can multiple by 800 to 1200 in a year); several dreaded disease including Lepidopterist are transmitted due to them. Thus controlling them is a real challenging task.</p>
+        <b>Treatment:</b><p>APMS’s service comprises of understanding & tracking the path of these rodents, thru our trained technician and then laying baits & traps accordingly. Periodic replenishment and relaying of baits would be monitored.</p>
+      </div>
+      <div class="service">
+        <h3>🐛 Termite Eliminator</h3>
+        <p>Termites are known for damaging all kind of woods including the tables, shelves, storage doors, etc… They feed on cellulose for nutrition; and it is that cellulose is found in woods. The threats of infestation caused by termites are on higher note. They leave a "chemical trail" for others to follow. They only need a crack to gain entrance into your premise, once in, they can infest everything. Termites work 24 hours a day without even resting.</p>
+        <b>Treatment:</b><p>APMS’s service comprises drilling holes at skirting level/ junction of wall and floor, injecting them with herbal termiticide and sealing them. This makes a completely undetectable chemical barrier around your property. This treatment is always precautionary until & unless the entire building is treated for the infestation.</p>
+      </div>
+      <div class="service">
+        <h3>🛏️ Bedbug Eliminator</h3>
+        <p>Bedbugs are often reported to be found when sanitation conditions are poor. They live feeding only on blood. They reside in tiny cracks in furniture as well as on textiles and upholstered furniture. They do not build nest, but live in huge groups. They tend to be most common on sofas, curtains; carpet’s and corner of wall papers. Bedbugs live for months without feeding, but lay hundreds of eggs in a short period.</p>
+        <b>Treatment:</b><p>APMS’s service comprises of spraying standard strong quality insecticides on the infected areas like sofas, Wall Cracks, Peeling of Color on wall Electric Switch Board bed, cushions etc. This treatment should preferably done when you know that the place can be kept shut for couple of hours. Infected linen or sofa cover should be washed in hot water.</p>
+      </div>
+      <div class="service">
+        <h3>🦟 Mosquito Eliminator</h3>
+        <p>Mosquito being a blood eating pest, whose tube like mouth parts pierce the skin and cause an irritating rashes. The routine bites of mosquitos are extremely harmful and may transmit disease such as malaria, dengue fever, low blood pressure, etc. They lay eggs in stagnant water, plants, lakes, plastic buckets, flowerpot saucers and a biggest and serious nuisance to deal with.</p>
+        <b>Treatment:</b><p>APMS’s service comprises of fogging the periphery with standard quality insecticides and spray treatments where there is stagnant water, small plants in order to terminate mosquito larvae. This being the most recommended today.</p>
+      </div>
+    </div>
+  </section>
+
+    <!-- Our Men @ Action Section -->
+<section id="action" class="section">
+  <h2>Our Men @ Action</h2>
+  <div class="services-grid">
+    <div class="service text-center">
+      <img src="webimg/termite.jpg" alt="Termite Treatment" class="img-fluid rounded mb-2" />
+      <h5>Termite Treatment</h5>
+    </div>
+    <div class="service text-center">
+      <img src="webimg/cockroach.jpg" alt="Cockroach Treatment" class="img-fluid rounded mb-2" />
+      <h5>Cockroach Treatment</h5>
+    </div>
+    <div class="service text-center">
+      <img src="webimg/rodent.jpg" alt="Rodent Management" class="img-fluid rounded mb-2" />
+      <h5>Rodent Management</h5>
+    </div>
+    <div class="service text-center">
+      <img src="webimg/mosquito.jpg" alt="Mosquito Fogging" class="img-fluid rounded mb-2" />
+      <h5>Mosquito Fogging</h5>
+    </div>
+    <div class="service text-center">
+      <img src="webimg/bedbug.jpg" alt="Bedbug Treatment" class="img-fluid rounded mb-2" />
+      <h5>Bedbug Treatment</h5>
+    </div>
+  </div>
+</section>
+
+  <!-- Expertise Section -->
+  <section id="expertise" class="section">
+    <h2>Our Expertise</h2>
+  <p>
+    As a leading pest control company, our expertise lies in providing comprehensive & effective solutions for a wide range of pests, utilizing advanced techniques, certified technicians, and a focus on preventative measures, ensuring the complete eradication of infestations while prioritizing the safety of your property & environment whether it is residential or commercial spaces.
+We specialized in Cockroaches, rodents & termites for both residential & commercial premises.
+
+  </p>
+  </section>
+
+
+  <!-- Clients Section -->
+  <section id="clients" class="section">
+    <h2>Esteemed Clients</h2>
+    <h4>A Few Of Our Esteemed Clients</h4>
+    <ul class="clients-list">
+      <li>LEVEL 1 RESTAURANT (LOKHANDWALA ANDHERI WEST)</li>
+      <li>PURPLE PENGUIN (LOKHANDWALA ANDHERI WEST)</li>
+      <li>HOTEL PRIVILEGE INN (MALAD)</li>
+      <li>BIRYANI BY KILO (CHEMBUR)</li>
+      <li>HOTEL SHREEDEVI (CHEMBUR)</li>
+      <li>ANNAPURNA VEG (NERUL)</li>
+      <li>SURUCHI VEG RESTAURANT (KANDIVALI EAST)</li>
+      <li>LADOO SAMRAT (LALBAUG)</li>
+      <li>SHOBHA VEG RESTAURANT (BYCULLA)</li>
+      <li>TIRUPATI BALAJI CHSL (ANDHERI EAST)</li>
+      <li>DIVYA JYOT CHSL (ANDHERI EAST)</li>
+      <li>RAHEJA REFLECTION CHSL (KANDIVALI EAST)</li>
+      <li>KULPREM CHSL, BABHAI NAKA (BORIVALI WEST)</li>
+      <li>NEW NIKITA CHSL, SHIMPOLI (BORIVALI WEST)</li>
+      <li>NEW MADHUSUDAN CHSL (BORIVALI WEST)</li>
+      <li>SIDDHARTH NAGAR CHSL (BORIVALI WEST)</li>
+      <li>NARMADA MOHAN CHSL (NAIGAON EAST)</li>
+      <li>AKSHAR CANABEE CHSL (KAMOTHE)</li>
+      <li>KIRAN CHSL (CHEMBUR)</li>
+      <li>SULSA CHSL (MALABAR HILL)</li>
+      <li>TATHASTU BUNGLOW (LONAVALA)</li>
+      <li>SWAMINI BUNGLOW (LONAVALA)</li>
+      <li>HOUSE OF BNM (OPERA HOUSE)</li>
+      <li>FILM CITY STUDIOS (GOREGAON EAST)</li>
+      <li>DWARKA SWEETS (VASHI & PANVEL)</li>
+      <li>UNIFLEX PROJECTS (ANDHERI & GOREGAON)</li>
+      <li>V TECH TECHNOLOGY (JOGESHWARI EAST)</li>
+      <li>D SQUARE (PUNE)</li>
+      <li>R M R & COMPANY (CHAKALA ANDHERI EAST)</li>
+      <li>APANA SAHAKARI BANK (MALAD EAST)</li>
+      <li>SHREEJI ELECTRONICS (MALAD WEST)</li>
+      <li>PRADEEP JEWELLERS (LOKHANDWALA ANDHERI WEST)</li>
+      <li>VIDHARBHA INFITECH P.LTD (ANDHERI)</li>
+      <li>GODAVARI URBAN MULTISTATE CO-OP SOCIETY LTD (NARIMAN POINT)</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p><strong>Main Office:</strong> Shop No. 3, Shankar Jadhav Chawl, Opp. Poinsar Metro Station, Kandivali (E), Mumbai - 101</p>
+    <p><strong>Branch:</strong> Shop No. 2481, Anand Nagar, Kopari Bridge, Thane East - 400603</p>
+    <p><strong>Phone:</strong> 9323055472 / 9870063322</p>
+    <p><strong>Email:</strong> asianpest2005@gmail.com</p>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2005 Asian Pest Management Services. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
